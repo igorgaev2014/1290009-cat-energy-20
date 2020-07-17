@@ -42,8 +42,36 @@
 
     <section class="matching">
       <h2 class="matching__title">Подбор программы</h2>
-      <p class="matching__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <h3 class="matching__description">Заполните анкету и мы подберем программу питания для вашего кота</h3>
       <form class="matching__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="matching__list">
+          <li class="matching__item">
+            <label class="item-matching__label" for="name">Имя:*</label>
+            <input class="item-matching__input" type="text" id="name" placeholder="Барсик" required>
+          </li>
+          <li class="matching__item">
+            <label class="item-matching__label" for="weight">Вес (кг):*</label>
+            <input class="item-matching__input" type="text" id="weight" placeholder="7" required>
+          </li>
+          <li class="matching__item">
+            <label class="item-matching__label" for="age">Возраст (лет):</label>
+            <input class="item-matching__input" type="text" id="age" placeholder="7">
+          </li>
+        </ul>
+        <ul class="matching__programs program-matching__list">
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="slim" value="slim" name="program" checked>
+            <label class="program-matching__label" for="slim">Похудение</label>
+          </li>
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="gain" value="gain" name="program">
+            <label class="program-matching__label" for="gain">Набор массы</label>
+          </li>
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="advice" value="advice" name="program">
+            <label class="program-matching__label" for="advice">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
         <fieldset class="matching__contacts">
           <legend class="matching__legend">Контактные данные (владельца кота)</legend>
           <ul class="contacts-matching__list">
