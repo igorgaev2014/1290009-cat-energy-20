@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML Academy: Кэт энерджи">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav_list site-list">
+          <li class="site-list__item">
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a>
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Cat Energy</h1>
+
+    <section class="matching">
+      <h2 class="matching__title">Подбор программы</h2>
+      <h3 class="matching__description">Заполните анкету и мы подберем программу питания для вашего кота</h3>
+      <form class="matching__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="matching__list">
+          <li class="matching__item item-matching">
+            <label class="item-matching__label" for="name">Имя:*</label>
+            <input class="item-matching__input" type="text" id="name" name="name" placeholder="Барсик" required>
+          </li>
+          <li class="matching__item item-matching">
+            <label class="item-matching__label" for="weight">Вес (кг):*</label>
+            <input class="item-matching__input" type="text" id="weight" name="weight" placeholder="7" required>
+          </li>
+          <li class="matching__item item-matching">
+            <label class="item-matching__label" for="age">Возраст (лет):</label>
+            <input class="item-matching__input" type="text" id="age" name="age" placeholder="7">
+          </li>
+        </ul>
+        <ul class="matching__programs program-matching">
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="slim" value="slim" name="program" checked>
+            <label class="program-matching__label" for="slim">Похудение</label>
+          </li>
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="gain" value="gain" name="program">
+            <label class="program-matching__label" for="gain">Набор массы</label>
+          </li>
+          <li class="program-matching__item">
+            <input class="program-matching__input" type="radio" id="advice" value="advice" name="program">
+            <label class="program-matching__label" for="advice">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
+        <fieldset class="matching__contacts contacts-matching">
+          <legend class="matching__legend">Контактные данные (владельца кота)</legend>
+          <ul class="contacts-matching__list">
+            <li class="contacts-matching__item">
+              <label class="contacts-matching__label" for="email">E-mail:*</label>
+              <input class="contacts-matching__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"
+                required>
+            </li>
+            <li class="contacts-matching__item">
+              <label class="contacts-matching__label" for="phone">Телефон:*</label>
+              <input class="contacts-matching__input" type="tel" id="phone" name="tel" placeholder="8 (960) 900-60-90"
+                required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="matching__commentary">
+          <legend class="matching__legend">Комментарий</legend>
+          <textarea class="matching__textarea" name="comment">Расскажите обо всех повадках кота
+          </textarea>
+        </fieldset>
+        <fieldset class="matching__additional additional-matching">
+          <legend class="matching__legend">Дополнительно</legend>
+          <ul class="additional-matching__list">
+            <li class="additional-matching__item">
+              <input class="additional-matching__input" type="checkbox" id="sugar" name="sugar" checked>
+              <label class="additional-matching__label" for="sugar">Сахарозаменитель</label>
+            </li>
+            <li class="additional-matching__item">
+              <input class="additional-matching__input" type="checkbox" id="water" name="water">
+              <label class="additional-matching__label" for="water">Питьевая вода</label>
+            </li>
+            <li class="additional-matching__item">
+              <input class="additional-matching__input" type="checkbox" id="milk" name="milk">
+              <label class="additional-matching__label" for="milk">Молоко</label>
+            </li>
+            <li class="additional-matching__item">
+              <input class="additional-matching__input" type="checkbox" id="vitamins" name="vitamins">
+              <label class="additional-matching__label" for="vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="matching__button button" type="submit">Отправить заявку</button>
+        <p class="matching__required">* - Обязательные поля</p>
+      </form>
+    </section>
+
+    <section class="contacts">
+      <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <img class="contacts__map" src="https://via.placeholder.com/150x150" width="150" height="150"
+        alt="Карта с местоположением по адресу">
+    </section>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="index.html">
+          <img src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML Academy: Кэт энерджи">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span
+                  class="visually-hidden">Мы в ВКонтакте</span></a>
+            </li>
+            <li>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span
+                  class="visually-hidden">Мы в Инстаграме</span></a>
+            </li>
+            <li>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span
+                  class="visually-hidden">Мы в Фейсбуке</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
