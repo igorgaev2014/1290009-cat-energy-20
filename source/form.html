@@ -17,7 +17,7 @@
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav_list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a href="index.html">
               Главная
             </a>
@@ -27,7 +27,7 @@
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a>
               Подбор программы
             </a>
@@ -47,15 +47,15 @@
         <ul class="matching__list">
           <li class="matching__item">
             <label class="item-matching__label" for="name">Имя:*</label>
-            <input class="item-matching__input" type="text" id="name" placeholder="Барсик" required>
+            <input class="item-matching__input" type="text" id="name" name="name" placeholder="Барсик" required>
           </li>
           <li class="matching__item">
             <label class="item-matching__label" for="weight">Вес (кг):*</label>
-            <input class="item-matching__input" type="text" id="weight" placeholder="7" required>
+            <input class="item-matching__input" type="text" id="weight" name="weight" placeholder="7" required>
           </li>
           <li class="matching__item">
             <label class="item-matching__label" for="age">Возраст (лет):</label>
-            <input class="item-matching__input" type="text" id="age" placeholder="7">
+            <input class="item-matching__input" type="text" id="age" name="age" placeholder="7">
           </li>
         </ul>
         <ul class="matching__programs program-matching__list">
@@ -77,39 +77,38 @@
           <ul class="contacts-matching__list">
             <li class="contacts-matching__item">
               <label class="contacts-matching__label" for="email">E-mail:*</label>
-              <input class="contacts-matching__input" type="email" id="email" placeholder="kuklachev@gmail.com"
+              <input class="contacts-matching__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"
                 required>
             </li>
             <li class="contacts-matching__item">
               <label class="contacts-matching__label" for="phone">Телефон:*</label>
-              <input class="contacts-matching__input" type="tel" id="phone" placeholder="8 (960) 900-60-90"
+              <input class="contacts-matching__input" type="tel" id="phone" name="tel" placeholder="8 (960) 900-60-90"
                 required>
             </li>
           </ul>
         </fieldset>
         <fieldset class="matching__commentary">
           <legend class="matching__legend">Комментарий</legend>
-          <textarea class="matching__textarea">
-            Расскажите обо всех повадках кота
+          <textarea class="matching__textarea" name="comment">Расскажите обо всех повадках кота
           </textarea>
         </fieldset>
         <fieldset class="matching__additional">
           <legend class="matching__legend">Дополнительно</legend>
           <ul class="additional-matching__list">
             <li class="additional-matching__item">
-              <input class="additional-matching__input" type="checkbox" id="sugar" checked>
+              <input class="additional-matching__input" type="checkbox" id="sugar" name="sugar" checked>
               <label class="additional-matching__label" for="sugar">Сахарозаменитель</label>
             </li>
             <li class="additional-matching__item">
-              <input class="additional-matching__input" type="checkbox" id="water">
+              <input class="additional-matching__input" type="checkbox" id="water" name="water">
               <label class="additional-matching__label" for="water">Питьевая вода</label>
             </li>
             <li class="additional-matching__item">
-              <input class="additional-matching__input" type="checkbox" id="milk">
+              <input class="additional-matching__input" type="checkbox" id="milk" name="milk">
               <label class="additional-matching__label" for="milk">Молоко</label>
             </li>
             <li class="additional-matching__item">
-              <input class="additional-matching__input" type="checkbox" id="vitamins">
+              <input class="additional-matching__input" type="checkbox" id="vitamins" name="vitamins">
               <label class="additional-matching__label" for="vitamins">Витамины</label>
             </li>
           </ul>
