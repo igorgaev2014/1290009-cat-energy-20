@@ -1,72 +1,32 @@
 // Начните писать стили здесь
-@import "page-header.less";
-@import "page-main.less";
-@import "page-footer.less";
+
+@import "global.less";
+@import "variables.less";
+@import "fonts.less";
 @import "button.less";
 
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff");
-  font-weight: 800;
-}
+@import "page-header.less";
+@import "main-nav.less";
+@import "site-list.less";
 
-@font-face {
-  font-family: "Oswald";
-  src: url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
-  font-weight: 500;
-}
+@import "page-main.less";
+@import "promo.less";
+@import "programs.less";
+@import "how-it-works.less";
+@import "example.less";
+@import "contacts.less";
+@import "catalog.less";
+@import "item-catalog.less";
+@import "to-all-catalog.less";
+@import "add-goods.less";
+@import "item-add-goods";
+@import "all-add-goods";
+@import "matching.less";
+@import "item-matching.less";
+@import "program-matching.less";
+@import "contacts-matching.less";
+@import "additional-matching.less";
 
-:root {
-  --basic-black: #000000;
-  --basic-white: #FFFFFF;
-  --basic-grey: #F2F2F2;
-  --basic-light-grey: #EAEAEA;
-  --basic-green: #68B738;
-  --basic-green-2: #5EAA2F;
-
-  --special-grey: #CDCDCD;
-  --special-grey-2: #EBEBEB;
-  --special-dark-grey: #444444;
-  --special-dark-grey-2: #222222;
-  --special-border: #E6E6E6;
-
-  --status-error: #FF8282;
-
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  width: 320px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-a {
-  color: var(--basic-black);
-  text-decoration: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+@import "page-footer.less";
+@import "social.less";
+@import "copyright.less";

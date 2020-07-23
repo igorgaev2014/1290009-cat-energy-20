@@ -1,7 +1,5 @@
-.site-list {
-
-  &__item {
-    font-family: "Oswald";
+  .site-list__item {
+    font-family: "Oswald", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -13,20 +11,18 @@
 
     &--active a {
       border-bottom: 1px solid var(--basic-green);
-      }
+    }
 
   }
 
-    &__item a {
+  .site-list__item a {
 
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-
+    &:hover {
+      opacity: 0.6;
     }
 
-}
+    &:active {
+      opacity: 0.3;
+    }
+
+  }
