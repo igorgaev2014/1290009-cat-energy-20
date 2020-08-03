@@ -1,3 +1,12 @@
+  .item-catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: @tablet-width) {
+      max-width: 245px;
+    }
+  }
+
   .item-catalog__list {
     color: var(--special-dark-grey);
     font-size: 12px;

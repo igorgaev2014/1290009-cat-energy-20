@@ -1,3 +1,24 @@
 .page-footer {
+  margin: 0 auto;
+  max-width: 1440px;
   background-color: var(--basic-grey);
+  padding: 0 20px;
+  padding-top: 39px;
+}
+
+.page-footer__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    }
 }

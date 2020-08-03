@@ -1,18 +1,35 @@
+  .to-all-catalog {
+    @media (max-width: @mobile-width-only) {
+
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-color: var(--basic-white);
+    }
+  }
+
   .to-all-catalog__title {
     font-family: @font-primary;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .to-all-catalog__description {
     color: var(--special-dark-grey);
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
   }
 
   .to-all-catalog__button {
     color: var(--special-dark-grey);
     font-size: 16px;
     background-color: var(--basic-grey);
+    display: flex;
+    justify-content: center;
   }
