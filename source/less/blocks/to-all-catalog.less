@@ -1,16 +1,11 @@
   .to-all-catalog {
-    @media (max-width: @mobile-width-only) {
-
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    }
 
     @media (min-width: @tablet-width) {
       background-color: var(--basic-white);
-    }
-
-    @media (min-width: @desktop-width) {
+      margin: 0;
     }
   }
 
@@ -46,9 +41,4 @@
     background-color: var(--basic-grey);
     display: flex;
     justify-content: center;
-
-    @media (min-width: @tablet-width) {
-      max-width: 249px;
-      margin: 0 auto;
-    }
   }
