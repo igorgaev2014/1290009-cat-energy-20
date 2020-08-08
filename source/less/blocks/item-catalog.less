@@ -1,5 +1,36 @@
+  .item-catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .item-catalog__list {
     color: var(--special-dark-grey);
     font-size: 12px;
     line-height: 16px;
+
+    @media (min-width: @tablet-width) {
+      grid-row-start: 2;
+      display: grid;
+      margin-bottom: 33px;
+    }
+
   }
+
+  .item-catalog__number {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .item-catalog__description {
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: end;
+  }
+
+

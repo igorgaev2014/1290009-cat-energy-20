@@ -1,18 +1,44 @@
+  .to-all-catalog {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: @tablet-width) {
+      background-color: var(--basic-white);
+      margin: 0;
+    }
+  }
+
   .to-all-catalog__title {
     font-family: @font-primary;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      max-width: 134px;
+      margin: 0 auto;
+      margin-bottom: 23px;
+    }
   }
 
   .to-all-catalog__description {
     color: var(--special-dark-grey);
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      max-width: 167px;
+      margin: 0 auto;
+    }
   }
 
   .to-all-catalog__button {
     color: var(--special-dark-grey);
     font-size: 16px;
     background-color: var(--basic-grey);
+    display: flex;
+    justify-content: center;
   }
