@@ -9,12 +9,6 @@ body {
   min-width: 320px;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 a {
   color: var(--basic-black);
   text-decoration: none;
@@ -36,4 +30,31 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+textarea {
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

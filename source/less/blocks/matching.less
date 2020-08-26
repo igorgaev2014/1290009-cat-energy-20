@@ -1,40 +1,180 @@
-  .matching__title {
-    font-family: @font-primary;
+.matching {
+  margin: 0 auto;
+  max-width: 1220px;
+  padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 68px;
+  }
+}
+
+.matching__form {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+  }
+}
+
+.matching__contacts {
+  padding: 0 20px;
+  margin-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.matching__commentary {
+  padding: 0 20px;
+  padding-bottom: 26px;
+  border-color: var(--basic-green);
+  border-width: 2px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.matching__additional {
+  padding: 0 20px;
+  border-color: var(--basic-green);
+  border-width: 2px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 34px;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.matching__title {
+  padding: 0 20px;
+  font-family: @font-primary;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 37px;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 56px;
+  }
+}
+
+.matching__description {
+  padding: 0 20px;
+  font-family: @font-primary;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+    max-width: 323px;
+  }
+}
+
+.matching__legend {
+  padding: 0 20px;
+  font-family: @font-primary;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
     font-size: 36px;
-    line-height: 36px;
   }
+}
 
-  .matching__description {
-    font-family: @font-primary;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
+.matching__textarea {
+  padding: 0 20px;
+  font-family: @font-primary;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  min-height: 150px;
+  min-width: 280px;
+  width: 100%;
+  border: 1px solid var(--basic-grey-3);
 
-  .matching__legend {
-    font-family: @font-primary;
-    font-size: 24px;
-    line-height: 26px;
-  }
-
-  .matching__textarea {
-    font-family: @font-primary;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--special-dark-grey);
-    text-transform: uppercase;
-  }
-
-  .matching__button {
-    color: var(--basic-white);
-    background-color: var(--basic-green);
-    font-size: 16px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
     line-height: 20px;
-    outline: none;
-    border: none;
   }
+}
 
-  .matching__required {
-    font-size: 14px;
-    line-height: 16px;
+.matching__button {
+  margin: 0 auto;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  font-size: 16px;
+  line-height: 20px;
+  outline: none;
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+.matching__required {
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.matching__item {
+  padding: 0 20px;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.matching__submit {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
+}
+
+.matching__programs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.matching__list {
+  padding: 0;
+  margin: 0;
+}

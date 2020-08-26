@@ -1,15 +1,88 @@
-  .contacts-matching__label {
-    font-family: @font-primary;
-    color: var(--special-dark-grey);
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 18px;
+.contacts-matching {
+  border-color: var(--basic-green);
+  border-width: 2px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 65px;
+  }
+}
+
+.contacts-matching__list {
+  padding: 0;
+  margin: 0;
+}
+
+.contacts-matching__item {
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+
+  &--email {
+    &::after {
+      content: "";
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/icon-mail.svg");
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-repeat: no-repeat;
+    }
   }
 
-  .contacts-matching__input {
-    font-family: @font-primary;
-    color: var(--special-dark-grey);
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 18px;
+  &--phone {
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/icon-phone.svg");
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      background-repeat: no-repeat;
+    }
   }
+}
+
+.contacts-matching__label {
+  font-family: @font-primary;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.contacts-matching__input {
+  font-family: @font-primary;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px;
+  width: 100%;
+  border: 1px solid var(--basic-grey-3);
+
+  &:focus {
+    border-color: var(--basic-black);
+  }
+
+  &:invalid {
+    border-color: var(--status-error);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
