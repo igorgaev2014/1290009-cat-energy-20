@@ -1,7 +1,7 @@
 .programs {
   margin: 0;
   padding: 0 20px;
-  padding-top: 20px;
+  padding-top: 24px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -10,6 +10,7 @@
   @media (min-width: @desktop-width) {
     margin: auto;
     max-width: 1220px;
+    margin-bottom: 45px;
   }
 }
 
@@ -31,7 +32,10 @@
   display: grid;
   grid-template-columns: 78px 1fr;
   background-color: var(--basic-grey);
-  padding: 30px 33px 18px 19px;
+  padding-top: 30px;
+  padding-right: 33px;
+  padding-bottom: 22px;
+  padding-left: 13px;
   margin-bottom: 20px;
   row-gap: 22px;
   position: relative;
@@ -42,7 +46,7 @@
     border-radius: 50%;
     background-color: var(--basic-green);
     z-index: 0;
-    top: 24px;
+    top: 22px;
     left: 22px;
     width: 50px;
     height: 50px;
@@ -53,11 +57,11 @@
     padding-top: 77px;
     padding-left: 53px;
     padding-bottom: 57px;
-    padding-right: 279px;
+    padding-right: 280px;
     margin-bottom: 30px;
 
     &::before {
-      top: 81px;
+      top: 90px;
       width: 200px;
       height: 200px;
       left: auto;
@@ -154,15 +158,16 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
+    margin: 0;
     padding: 0;
     grid-column-start: 1;
+    margin-bottom: 3px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 55px;
     padding-left: 162px;
   }
 }
@@ -174,6 +179,8 @@
   font-size: 14px;
   line-height: 18px;
   padding: 0;
+  padding-left: 8px;
+  padding-top: 8px;
   margin: 0;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -181,17 +188,19 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
     border: none;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-end: 2;
+    padding: 0;
+    min-width: 346px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 23px;
+    margin-bottom: 3px;
   }
 }
 
@@ -204,9 +213,10 @@
   line-height: 16px;
   margin: 0;
   padding: 0;
+  padding-left: 6px;
+  padding-top: 18px;
   grid-column-start: 1;
   grid-column-end: 3;
-  padding-top: 15px;
   align-self: center;
   grid-row-start: 3;
   position: relative;
@@ -215,8 +225,8 @@
     position: absolute;
     content: url("../img/icon-right-arrow-long.svg");
     z-index: 1;
-    top: 13px;
-    left: 100px;
+    top: 17px;
+    left: 107px;
     width: 24px;
     height: 12px;
   }
@@ -236,10 +246,11 @@
     font-size: 20px;
     line-height: 30px;
     padding-top: 0;
+    margin-left: -8px;
 
     &::before {
       top: -3px;
-      left: 130px;
+      left: 140px;
     }
   }
 

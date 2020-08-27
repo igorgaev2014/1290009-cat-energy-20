@@ -4,6 +4,23 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    flex-direction: row;
+    padding-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
+  }
+}
+
+.page-header__anchor {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--special-border);
+
   &:hover {
     opacity: 0.8;
   }
@@ -13,20 +30,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
-    flex-direction: row;
-    padding-top: 24px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 53px;
+    text-align: left;
+    padding: 0;
+    border: none;
   }
 }
 
 .page-header__logo {
-  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 26px;
 
   @media (min-width: @tablet-width) {
-    text-align: left;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }

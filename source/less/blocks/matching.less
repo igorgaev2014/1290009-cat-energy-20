@@ -19,8 +19,8 @@
 
 .matching__contacts {
   padding: 0 20px;
-  margin-top: 26px;
-  padding-bottom: 26px;
+  margin-top: 31px;
+  padding-bottom: 12px;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
@@ -30,7 +30,7 @@
 
 .matching__commentary {
   padding: 0 20px;
-  padding-bottom: 26px;
+  padding-bottom: 23px;
   border-color: var(--basic-green);
   border-width: 2px;
   border-bottom: none;
@@ -50,7 +50,7 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
-  padding-bottom: 34px;
+  padding-bottom: 40px;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
@@ -63,11 +63,15 @@
   font-family: @font-primary;
   font-size: 36px;
   line-height: 36px;
-  margin-bottom: 37px;
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 35px;
   font-weight: normal;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     padding: 0;
+    margin-top: 10px;
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 56px;
@@ -80,10 +84,12 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
   font-weight: normal;
 
   @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    margin-bottom: 60px;
     font-size: 20px;
     line-height: 30px;
     max-width: 324px;
@@ -96,7 +102,7 @@
 }
 
 .matching__legend {
-  padding: 0 20px;
+  padding: 0;
   font-family: @font-primary;
   font-size: 24px;
   line-height: 26px;
@@ -109,7 +115,9 @@
 }
 
 .matching__textarea {
-  padding: 0 20px;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   font-family: @font-primary;
   font-size: 16px;
   line-height: 18px;
@@ -119,10 +127,18 @@
   min-width: 280px;
   width: 100%;
   border: 1px solid var(--basic-grey-3);
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    padding-left: 16px;
+    padding-top: 16px;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 174px;
+    margin-bottom: 45px;
   }
 }
 
@@ -137,6 +153,17 @@
   text-align: center;
   width: 100%;
   margin-bottom: 21px;
+
+  &:active {
+    color: var(--button-active);
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .matching__required {
@@ -145,24 +172,36 @@
   line-height: 16px;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: left;
+    margin-left: -20px;
+    margin-top: 10px;
+  }
 }
 
 .matching__item {
   padding: 0 20px;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .matching__submit {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: 3;
+    column-gap: 60px;
   }
 }
 
@@ -177,4 +216,9 @@
 .matching__list {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
 }

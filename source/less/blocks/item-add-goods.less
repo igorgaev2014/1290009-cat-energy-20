@@ -3,7 +3,10 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 37px;
+    padding-top: 27px;
+    padding-bottom: 25px;
+    padding-left: 37px;
+    padding-right: 37px;
     border: 1px solid var(--special-grey);
     box-sizing: border-box;
   }
@@ -28,6 +31,8 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    margin-bottom: 29px;
+    font-weight: normal;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,6 +58,9 @@
     grid-row-start: 1;
     grid-column-start: 2;
     margin-left: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -60,7 +68,6 @@
     margin: 0;
   }
 }
-
 
 .item-add-goods__button {
   color: var(--basic-white);
@@ -75,9 +82,21 @@
   height: 26px;
   align-items: center;
 
+  &:active {
+    color: var(--button-active);
+    opacity: 1;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 3;
     width: 244px;
     margin-left: auto;
+    padding-bottom: 6px;
+  }
+}
+
+.item-add-goods__number {
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
   }
 }
