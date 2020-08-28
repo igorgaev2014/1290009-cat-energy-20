@@ -1,52 +1,172 @@
-  .how-it-works {
-    padding: 0 20px;
-    padding-bottom: 22px;
+.how-it-works {
+  padding: 0 20px;
+  padding-bottom: 46px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1220px;
+  }
+}
+
+.how-it-works__title {
+  font-family: @font-primary;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 40px;
+  margin-top: 6px;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
     margin: 0;
+    margin-top: 13px;
+    margin-bottom: 74px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 
-    @media (min-width: @tablet-width) {
-      padding: 0 30px;
-    }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+  }
+}
 
-    @media (min-width: @desktop-width) {
-      margin: auto;
-      max-width: 1220px;
+.how-it-works__item {
+  color: var(--special-dark-grey);
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 80px;
+  max-width: 200px;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--basic-green);
+    background-size: contain;
+  }
+
+  &--leaf {
+    &::after {
+      background-image: url("../img/advantage-leaf@1x.png");
+      z-index: 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
     }
   }
 
-  .how-it-works__title {
-    font-family: @font-primary;
-    font-size: 36px;
-    line-height: 40px;
+  &--powder {
+    &::after {
+      background-image: url("../img/advantage-powder@1x.png");
 
-    @media (min-width: @tablet-width) {
-      font-size: 60px;
-      line-height: 60px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
     }
   }
 
-  .how-it-works__item {
-    color: var(--special-dark-grey);
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 20px;
-    padding-left: 80px;
+  &--dining {
+    &::after {
+      background-image: url("../img/advantage-dining@1x.png");
 
-    @media (min-width: @tablet-width) {
-      width: 240px;
-      min-height: 280px;
-      padding-top: 150px;
-      padding-bottom: 60px;
-      padding-left: 0;
-      font-size: 16px;
-      line-height: 24px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
     }
   }
 
-  .how-it-works__list {
-    display: flex;
-    flex-wrap: wrap;
+  &--clock {
+    &::after {
+      background-image: url("../img/advantage-clock@1x.png");
 
-    @media (min-width: @tablet-width) {
-      justify-content: space-between;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
     }
   }
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    padding-top: 115px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::before {
+      position: absolute;
+      color: var(--basic-grey);
+      font-size: 280px;
+      font-family: @font-primary;
+      right: -50px;
+      top: 90px;
+      z-index: -1;
+    }
+
+    &--leaf {
+      &::before {
+        content: "1";
+        right: -30px;
+      }
+    }
+
+    &--powder {
+      &::before {
+        content: "2";
+      }
+    }
+
+    &--dining {
+      &::before {
+        content: "3";
+      }
+    }
+
+    &--clock {
+      &::before {
+        content: "4";
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+  }
+}
+
+.how-it-works__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 26px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 185px;
+    row-gap: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 125px;
+  }
+}
