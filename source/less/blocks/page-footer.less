@@ -2,6 +2,10 @@
   background-color: var(--basic-grey);
   padding-top: 23px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
 }
 
 .page-footer__wrapper {
@@ -12,7 +16,7 @@
 
 .page-footer__item {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 15px;
   position: relative;
 }
@@ -39,6 +43,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }
 

@@ -12,6 +12,7 @@
   height: 275px;
   margin-bottom: 175px;
   position: relative;
+  z-index: 0;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -19,10 +20,27 @@
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-image: none;
     background-color: var(--basic-white);
     padding-left: 109px;
     padding-bottom: 360px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-desktop@1x.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: contain;
+      top: 200px;
+      right: 0px;
+      width: 700px;
+      height: 600px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -44,10 +62,10 @@
       background-color: var(--basic-green);
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
-      z-index: 0;
+      z-index: -1;
       background-size: contain;
-      top: -160px;
-      right: -10px;
+      top: -165px;
+      right: -12px;
       width: 720px;
       height: 696px;
 
@@ -63,8 +81,8 @@
       background-repeat: no-repeat;
       z-index: 0;
       background-size: contain;
-      top: -20px;
-      right: 315px;
+      top: -22px;
+      right: 318px;
       width: 552px;
       height: 499px;
 
@@ -94,9 +112,14 @@
     text-align: left;
     margin: 0;
     width: 414px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 8px;
     margin-bottom: 41px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 12px;
+    margin-top: 5px;
   }
 }
 
@@ -114,11 +137,13 @@
     line-height: 20px;
     margin-bottom: 49px;
     text-align: left;
-    margin-left: 12px;
+    margin-left: 9px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
+    margin-left: 12px;
+    margin-bottom: 51px;
   }
 }
 
@@ -132,6 +157,7 @@
   justify-content: center;
   padding-top: 11px;
   padding-bottom: 11px;
+  z-index: 1;
 
   &:active {
     color: var(--button-active);
@@ -148,7 +174,7 @@
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
-    margin-left: 10px;
+    margin-left: 12px;
   }
 }
 
