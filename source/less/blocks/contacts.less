@@ -9,7 +9,7 @@
   @media (min-width: @desktop-width) {
     margin: auto;
     padding: 0;
-    max-width: 1440px;
+    /* max-width: 1440px; */
   }
 
   &--index {
@@ -58,6 +58,7 @@
   @media (min-width: @desktop-width) {
     width: 155px;
     padding: 0;
+    text-align: left;
   }
 }
 
@@ -112,12 +113,14 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 95px;
-    left: 140px;
+    left: 110px;
     background: var(--basic-white);
     padding-top: 66px;
     padding-left: 76px;
     padding-bottom: 60px;
     padding-right: 89px;
-    width: 570px;
+    width: 405px;
+    left: 50%;
+    transform: translateX(-107%)
   }
 }

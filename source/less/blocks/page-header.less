@@ -12,6 +12,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 53px;
+    z-index: 20;
   }
 }
 
@@ -20,14 +21,6 @@
   padding-top: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--special-border);
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 
   @media (min-width: @tablet-width) {
     text-align: left;
@@ -40,21 +33,19 @@
   position: absolute;
   top: 10px;
   left: 26px;
+  z-index: 20;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     top: 0;
     left: 0;
-    position: relative;
-
-    &::before {
-      content: url("../img/icon-cat-pro.svg");
-      position: absolute;
-      top: 35px;
-      left: 10px;
-      width: 67px;
-      height: 28px;
-      z-index: 10;
-      background: var(--basic-green-2);
-    }
+    position: relative
   }
 }
