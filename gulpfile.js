@@ -26,6 +26,16 @@ const build = (done) => {gulp.series(
 
 exports.build = build;
 
+// start
+
+const start = (done) => {gulp.series(
+  "build",
+  "server",
+  )(done)
+};
+
+exports.start = start;
+
 // del
 
 const clean = () => {
@@ -56,7 +66,7 @@ exports.copy = copy;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.webp = createWebp;
