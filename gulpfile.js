@@ -4,7 +4,86 @@ const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const imagemin = require("gulp-imagemin");
 const sync = require("browser-sync").create();
+const del = require("del");
+
+// build
+
+const build = (done) => {gulp.series(
+  "clean",
+  "copy",
+  "styles",
+  "images",
+  "webp",
+  "sprite",
+  )(done)
+};
+
+exports.build = build;
+
+// del
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
+// copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico",
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
+// Create WebP
+
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"))
+}
+
+exports.webp = createWebp;
+
+// SVG-sprite
+
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.sprite = sprite;
+
+// Image Min
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.mozjpeg({progressive: true}),
+        imagemin.svgo()
+    ]))
+}
+
+exports.images = images;
 
 // Styles
 
@@ -16,8 +95,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -28,7 +109,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
