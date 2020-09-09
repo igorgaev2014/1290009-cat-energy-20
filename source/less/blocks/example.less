@@ -131,7 +131,7 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 6px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -193,7 +193,6 @@
     justify-self: start;
     max-width: none;
     margin-top: -2px;
-
   }
 }
 
@@ -204,6 +203,7 @@
   width: 260px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -215,6 +215,19 @@
     margin-top: 0;
     width: 570px;
     margin-bottom: 53px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 428px;
+      height: 6px;
+      top: 33px;
+      left: 133px;
+      background-color: var(--special-grey-5);
+      border: none;
+      z-index: 0;
+      border-radius: 6px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -224,6 +237,11 @@
     padding-right: 0;
     padding-left: 82px;
     margin-top: -15px;
+
+    &::before {
+      top: 26px;
+      left: 154px;
+    }
   }
 }
 
@@ -236,58 +254,18 @@
   margin-right: 13px;
   font-weight: bold;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 84px;
-    height: 14px;
-    top: 3px;
-    left: 48px;
-    background-color: var(--basic-white);
-    border-color: var(--special-grey);
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 6px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 35px;
-    height: 6px;
-    top: 8px;
-    left: 55px;
-    background-color: var(--basic-green);
-    border-radius: 6px;
-  }
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     font-weight: normal;
+    border-bottom: 1px dotted var(--special-grey-8);
+    padding-bottom: 8px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 428px;
-      height: 6px;
-      top: 8px;
-      left: 66px;
-      background-color: var(--special-grey-5);
-      border: none;
+    &:hover {
+      border-bottom: 1px solid var(--special-grey-8);
     }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 8px;
-      top: -7px;
-      left: 270px;
-      background-color: var(--basic-green);
-      border-radius: 20px;
-      border-color: var(--basic-white);
-      border-width: 12px;
-      border-style: solid;
+    &:active {
+      border: none;
     }
   }
 }
@@ -303,16 +281,99 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     font-weight: normal;
+    border-bottom: 1px dotted var(--special-grey-8);
+    padding-bottom: 8px;
+
+    &:hover {
+      border-bottom: 1px solid var(--special-grey-8);
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+}
+
+.example__toggle {
+  display: flex;
+  align-self: center;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 84px;
+    height: 14px;
+    top: -8px;
+    left: -37px;
+    background-color: var(--basic-white);
+    border-color: var(--special-grey);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    top: -3px;
+    left: -30px;
+    background-color: var(--basic-green);
+    border-radius: 6px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    background-color: var(--basic-white);
+    border-radius: 20px;
+    border-color: var(--special-grey);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 2px 2px 0 var(--special-grey);
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    left: 333px;
+
+    &:hover {
+      box-shadow: 0 2px 5px 0 var(--special-grey);
+    }
+
+    &:active {
+      border-color: var(--basic-green);
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      background-color: var(--basic-green);
+      top: 13px;
+      left: 13px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 350px;
+    top: 11px;
   }
 }
 
 .example__img {
   display: flex;
-    margin-left: -16px;
-    min-width: 312px;
-    height: 237px;
-    position: relative;
-    margin-top: -10px;
+  margin-left: -16px;
+  min-width: 312px;
+  height: 237px;
+  position: relative;
+  margin-top: -10px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;

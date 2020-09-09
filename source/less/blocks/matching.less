@@ -1,23 +1,9 @@
-.matching {
+.matching__wrapper {
   margin: 0 auto;
   max-width: 1220px;
-  padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
-    margin-bottom: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 65px;
-  }
-}
-
-.matching__form {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
   }
 }
 
@@ -25,6 +11,17 @@
   padding: 0 20px;
   margin-top: 29px;
   padding-bottom: 12px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    right: 0;
+    top: 17px;
+    z-index: -1;
+    height: 2px;
+    background-color: var(--basic-green);
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
@@ -39,18 +36,31 @@
 .matching__commentary {
   padding: 0 20px;
   padding-bottom: 23px;
-  border-color: var(--basic-green);
-  border-width: 2px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    right: 0;
+    top: 14px;
+    z-index: -1;
+    height: 2px;
+    background-color: var(--basic-green);
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 17px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
-  }
-
-  @media (min-width: @desktop-width) {
     padding: 0;
     margin-bottom: 70px;
   }
@@ -58,12 +68,24 @@
 
 .matching__additional {
   padding: 0 20px;
-  border-color: var(--basic-green);
-  border-width: 2px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   padding-bottom: 15px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    right: 0;
+    top: 14px;
+    z-index: -1;
+    height: 2px;
+    background-color: var(--basic-green);
+
+    @media (min-width: @desktop-width) {
+      top: 21px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 38px;
@@ -131,15 +153,47 @@
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 34px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 10;
+  display: inline-block;
+  margin-left: -41px;
+  position: relative;
+
 
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
-    padding-left: 17px;
     font-size: 36px;
+    margin-left: -62px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: -80px;
+  }
+}
+
+.matching__legend-text {
+  background-color: var(--basic-white);
+  padding-left: 20px;
+  padding-right: 10px;
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.matching__legend-text--contacts {
+  width: 191px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
   }
 }
 
@@ -169,7 +223,7 @@
     margin-right: 20px;
     min-height: 174px;
     margin-bottom: 46px;
-    width: 631px;
+    width: calc(100vw - 142px);
   }
 
   @media (min-width: @desktop-width) {
@@ -236,18 +290,20 @@
 
 .matching__submit {
   padding: 0 20px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
+    padding: 0 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: 3;
     column-gap: 60px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    padding: 0 111px;
     column-gap: 80px;
   }
 }
@@ -267,12 +323,16 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    padding-left: 40px;
-    padding-right: 40px;
     margin-bottom: 25px;
   }
+}
 
+.matching__list-programs {
   @media (min-width: @desktop-width) {
-    padding: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 }
