@@ -245,8 +245,8 @@
         <h2 class="matching__title">Подбор программы</h2>
         <h3 class="matching__description">Заполните анкету, и мы подберем программу питания для вашего кота</h3>
       </div>
-      <form class="matching__form" action="https://echo.htmlacademy.ru" method="get">
-        <div class="matching__wrapper matching__list-programs">
+      <form class="matching__form matching__wrapper" action="https://echo.htmlacademy.ru" method="get">
+        <div class="matching__list-programs">
           <ul class="matching__list">
             <li class="matching__item item-matching">
               <label class="item-matching__label" for="name">Имя:*</label>
@@ -279,33 +279,27 @@
           </ul>
         </div>
         <fieldset class="matching__contacts contacts-matching">
-          <div class="matching__wrapper">
-            <legend class="matching__legend">
-              <span class="matching__legend-text matching__legend-text--contacts">Контактные данные (владельца кота)</span>
-            </legend>
-            <ul class="contacts-matching__list">
-              <li class="contacts-matching__item contacts-matching__item--email">
-                <label class="contacts-matching__label" for="email">E-mail:*</label>
-                <input class="contacts-matching__input" type="email" id="email" name="email"
-                  placeholder="kuklachev@gmail.com" required>
-              </li>
-              <li class="contacts-matching__item contacts-matching__item--phone">
-                <label class="contacts-matching__label" for="phone">Телефон:*</label>
-                <input class="contacts-matching__input" type="tel" id="phone" name="tel" placeholder="8 (960) 900-60-90"
-                  required>
-              </li>
-            </ul>
-          </div>
+          <legend class="matching__legend">
+            <span class="matching__legend-text matching__legend-text--contacts">Контактные данные (владельца кота)</span>
+          </legend>
+          <ul class="contacts-matching__list">
+            <li class="contacts-matching__item contacts-matching__item--email">
+              <label class="contacts-matching__label" for="email">E-mail:*</label>
+              <input class="contacts-matching__input" type="email" id="email" name="email"
+                placeholder="kuklachev@gmail.com" required>
+            </li>
+            <li class="contacts-matching__item contacts-matching__item--phone">
+              <label class="contacts-matching__label" for="phone">Телефон:*</label>
+              <input class="contacts-matching__input" type="tel" id="phone" name="tel" placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="matching__commentary">
-          <div class="matching__wrapper">
-            <legend class="matching__legend"><span class="matching__legend-text">Комментарий</span></legend>
-            <textarea class="matching__textarea" name="comment">Расскажите обо всех повадках кота</textarea>
-          </div>
+          <legend class="matching__legend"><span class="matching__legend-text">Комментарий</span></legend>
+          <textarea class="matching__textarea" name="comment">Расскажите обо всех повадках кота</textarea>
         </fieldset>
         <fieldset class="matching__additional additional-matching">
-          <div class="matching__wrapper">
-            <legend class="matching__legend"><span class="matching__legend-text">Дополнительно</span></legend>
+            <legend class="matching__legend matching__wrapper"><span class="matching__legend-text">Дополнительно</span></legend>
             <ul class="additional-matching__list">
               <li class="additional-matching__item">
                 <input class="visually-hidden additional-matching__input" type="checkbox" id="sugar" name="sugar" checked>
@@ -324,9 +318,8 @@
                 <label class="additional-matching__label" for="vitamins">Витамины</label>
               </li>
             </ul>
-          </div>
         </fieldset>
-          <div class="matching__submit matching__wrapper">
+          <div class="matching__submit">
               <button class="matching__button button" type="submit">Отправить заявку</button>
               <p class="matching__required">* — Обязательные поля</p>
           </div>

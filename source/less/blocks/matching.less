@@ -7,6 +7,10 @@
   }
 }
 
+.matching__form {
+  z-index: 10;
+}
+
 .matching__contacts {
   padding: 0 20px;
   margin-top: 29px;
@@ -16,9 +20,9 @@
     position: absolute;
     content: "";
     width: 100vw;
-    right: 0;
+    left: calc(-50vw + 50%);
     top: 17px;
-    z-index: -1;
+    z-index: 50;
     height: 2px;
     background-color: var(--basic-green);
   }
@@ -43,9 +47,9 @@
     position: absolute;
     content: "";
     width: 100vw;
-    right: 0;
+    left: calc(-50vw + 50%);
     top: 14px;
-    z-index: -1;
+    z-index: 50;
     height: 2px;
     background-color: var(--basic-green);
 
@@ -58,11 +62,16 @@
     }
   }
 
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
+
   }
 }
 
@@ -76,9 +85,9 @@
     position: absolute;
     content: "";
     width: 100vw;
-    right: 0;
+    left: calc(-50vw + 50%);
     top: 14px;
-    z-index: -1;
+    z-index: 50;
     height: 2px;
     background-color: var(--basic-green);
 
@@ -88,7 +97,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 38px;
+    padding-bottom: 39px;
+    margin-top: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -155,11 +165,10 @@
   margin-bottom: 34px;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 10;
+  z-index: 60;
   display: inline-block;
   margin-left: -41px;
   position: relative;
-
 
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
@@ -216,14 +225,14 @@
     font-size: 20px;
     line-height: 20px;
     padding-left: 18px;
-    padding-top: 16px;
+    padding-top: 22px;
     padding-right: 16px;
     margin: 0;
     margin-left: 20px;
     margin-right: 20px;
     min-height: 174px;
     margin-bottom: 46px;
-    width: calc(100vw - 142px);
+    width: calc(100vw - 240px);
   }
 
   @media (min-width: @desktop-width) {
@@ -293,18 +302,19 @@
   margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px;
+    padding: 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: 3;
     column-gap: 60px;
-    margin-bottom: 58px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 111px;
+    padding: 0;
     column-gap: 80px;
+    margin-bottom: 62px;
   }
 }
 
